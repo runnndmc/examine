@@ -1,81 +1,16 @@
 
 
-### Project Title
+## Project Title 
 
-_**Examine** 
-A medical expense tracker for caregivers and patients that helps in organizing finances specific to medical bills. 
+Examine 
 
-<br>
+### Description
 
-### Wireframes
+A medical expense tracker for caregivers and patients to track the status of their medical bills. 
 
-> Use the Wireframes section to display desktop, tablet and mobile views.
+## Wireframe
 
-![Dummy Link](url)
-
-- Desktop Landing
-
-![Dummy Link](url)
-
-- Desktop Body
-
-![Dummy Link](url)
-
-- Desktop Resource Index
-
-![Dummy Link](url)
-
-- Desktop Resource Show
-
-![Dummy Link](url)
-
-- Tablet Resource Index
-
-![Dummy Link](url)
-
-- Mobile Resource Index
-
-<br>
-
-### MVP
-
-> The Minimum Viable Product should be a well-planned and easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
-
-_The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
-
-<br>
-
-#### Goals
-
-- _Lorem ipsum, dolor sit amet,_
-- _consectetur adipiscing elit._
-- _Phasellus dapibus fermentum risus vitae bibendum._
-- _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
-- _etc._
-
-<br>
-
-#### Libraries
-
-> Use this section to list all supporting libraries and their role in the project.
-
-|     Library      | Description                                |
-| :--------------: | :----------------------------------------- |
-|   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
-| React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
-|   React Spring   | _Lorem ipsum dolor sit amet, consectetur._ |
-
-<br>
-
-#### Data
-
-> Use the Data Section to define the API(s) you will be consuming for your project, inluding sample URL queries.
-
-|    API     | Quality Docs? | Website       | Sample Query                            |
-| :--------: | :-----------: | :------------ | :-------------------------------------- |
-| WeatherAPI |      yes      | _example.com_ | _example.com/mickeymouse?s=movies&t=10_ |
-
-<br>
+ [My Wireframe](https://facebook.github.io/create-react-app/docs/running-tests)
 
 #### Component Hierarchy
 
@@ -98,9 +33,8 @@ src
       |__ Footer.jsx
 ```
 
-<br>
 
-#### Component Breakdown
+### Component Breakdown
 
 > Use this section to go into further depth regarding your components, including breaking down the components as stateless or stateful, and considering the passing of data between those components.
 
@@ -111,8 +45,6 @@ src
 |   Gallery    |   class    |   y   |   n   | _The gallery will render the posts using cards in flexbox._      |
 | Gallery Card | functional |   n   |   y   | _The cards will render the post info via props._                 |
 |    Footer    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
-
-<br>
 
 #### Component Estimates
 
@@ -128,35 +60,28 @@ src
 
 <br>
 
-#### Helper Functions
+###  API
 
-> Use this section to document all helper functions– generic functions that can be reused in other applications.
+[This is my Airtable API](https://facebook.github.io/create-react-app/docs/getting-started).
 
-|  Function  | Description                                |
-| :--------: | :----------------------------------------- |
-| Capitalize | _Lorem ipsum dolor sit amet, consectetur._ |
 
-<br>
+## MVP
 
-### Post-MVP
+-
+-
+-
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+## Post-MVP
 
-- _Add user account and auth capabilities._
-- _Utilize the Giphy API to welcome new users with funny gifs._
 
-<br>
 
 ### SWOT Analysis
 
-***
-
-## Project Delivery
+Strengths:
+Weaknesses:
+Opportunities:
+Threats:
 
 ### Code Showcase
 
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
 
-### Code Issues & Resolutions
-
-> Use this section to list of all major issues encountered and their resolution, if you'd like.
