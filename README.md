@@ -40,7 +40,7 @@ src
       |__ Greeting.js
       |__ ServiceTotals.js
       |__ NewBill.js
-      |__ ServiceDetails.jsx
+      |__ ServiceDetails.js
       |__ Footer.js
 ```
 

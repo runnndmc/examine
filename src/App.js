@@ -1,10 +1,12 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
+import axios from "axios";
 
 import "./App.css";
 import Header from "./Header";
-import axios from "axios";
+import ServiceDetails from './components/ServiceDetails'
+
 
 const BASE_URL = 'https://api.airtable.com/v0/appBipVvhjiI1uNnZ/Medical%20Expenses' 
 
@@ -31,6 +33,11 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <Switch>
+        <Route exact path='/'>
+          <ServiceDetails records={records}/>
+        </Route>
+      </Switch>
     </div>
   );
 }
