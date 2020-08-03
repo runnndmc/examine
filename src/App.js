@@ -6,6 +6,7 @@ import axios from "axios";
 import "./App.css";
 import Header from "./Header";
 import ServiceDetails from './components/ServiceDetails'
+import ServiceTotals from './components/ServiceTotals'
 
 
 const BASE_URL = 'https://api.airtable.com/v0/appBipVvhjiI1uNnZ/Medical%20Expenses' 
@@ -35,13 +36,21 @@ function App() {
 
       <Header />
       <Switch>
-        <Route exact path='/'>
+      <Route exact path='/'>
+          <ServiceTotals 
+            records={records}
+            fetchRecords={fetchRecords}
+            invokeFetch={invokeFetch}
+          />
+        </Route>
+        <Route exact path='/servicedetails'>
           <ServiceDetails 
             records={records} 
             fetchRecords={fetchRecords} 
             invokeFetch={invokeFetch}
           />
         </Route>
+  
       </Switch>
     </div>
   );
