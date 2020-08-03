@@ -1,9 +1,20 @@
 import React from 'react'
 
-const ServiceDetails = () =>{
+import Bill from './Bill'
+
+const ServiceDetails = (props) => {
+    const { records } = props
 
     return (
-        <h1> services </h1>
+        <div>
+            <h1> services </h1>
+            {records.map((record) => (
+                <Bill 
+                    record={record}
+                />
+            ))}
+        </div>
+
     )
 }
 
