@@ -6,6 +6,8 @@ import "./App.css";
 import Header from "./Header";
 import axios from "axios";
 
+const BASE_URL = 'https://api.airtable.com/v0/appBipVvhjiI1uNnZ/Medical%20Expenses' 
+
 function App() {
   const [records, updateRecords] = useState([]);
   const [fetchRecords, invokeFetch] = useState(true);
@@ -13,15 +15,15 @@ function App() {
   useEffect(() => {
     const getAirtableRecords = async () => {
       const response = await axios.get(
-        `https://api.airtable.com/v0/appBipVvhjiI1uNnZ/Patient?maxRecords=3&view=Main%20View`,
+        `${BASE_URL}?Main%20View`,
         {
           headers: {
             Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_API_KEY}`
           },
         }
       );
-      updateRecords(response.data);
-      console.log(response);
+      updateRecords(response.data.records);
+      console.log(response.data.records);
     };
     getAirtableRecords();
   }, [fetchRecords]);
