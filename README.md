@@ -67,9 +67,9 @@ src
 | Add New Bill Form    |    L     |     2 hrs      |           |         |
 | Create Header    |    L     |     .5 hrs      |           |         |
 | Add Footer    |    L     |     .5 hrs      |           |         |
-| Create Service Details with CRUD|    H     |     5 hrs      |     1 hrs     | 
+| Create Service Details with CRUD|    H     |     5 hrs      |         | 
 | Create Service Totals     |    H     |     4 hrs      |           |         |    TBD     |
-| TOTAL               |          |     12 hrs      |     3 hrs     |     TBD     |
+| TOTAL               |          |     12 hrs      |         |     TBD     |
 
 <br>
 
@@ -92,10 +92,10 @@ src
 
 ### SWOT Analysis
 
-Strengths: Passing props from App to children and grand children
-Weaknesses: Updating the state
-Opportunities: Add new CSS features
-Threats: Having a Service Balance section as well as a detailed balance section.
+- Strengths: Passing props from App to children and grand children
+- Weaknesses: Updating the state
+- Opportunities: Add new CSS features
+- Threats: Having a Service Balance section as well as a detailed balance section.
 
 ### Code Showcase
 
