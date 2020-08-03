@@ -5,7 +5,13 @@ const Bill = (props) => {
     const { fields } = props.record
 
     return(
-        <h2>{fields.notes}</h2>
+        <div>
+            <h2>{fields.service}</h2>
+            <h4>{fields.provider}</h4>
+            <h4>{fields.duedate}</h4>
+            <p>{fields.notes}</p>
+
+        </div>
 
     )
 }
