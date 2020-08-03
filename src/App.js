@@ -5,11 +5,10 @@ import axios from "axios";
 
 import "./App.css";
 import Header from "./Header";
-import ServiceDetails from './components/ServiceDetails'
-import ServiceTotals from './components/ServiceTotals'
+import ServiceTotals from "./components/ServiceTotals";
 
-
-const BASE_URL = 'https://api.airtable.com/v0/appBipVvhjiI1uNnZ/Medical%20Expenses' 
+const BASE_URL =
+  "https://api.airtable.com/v0/appBipVvhjiI1uNnZ/Medical%20Expenses";
 
 function App() {
   const [records, updateRecords] = useState([]);
@@ -17,14 +16,11 @@ function App() {
 
   useEffect(() => {
     const getAirtableRecords = async () => {
-      const response = await axios.get(
-        `${BASE_URL}?Main%20View`,
-        {
-          headers: {
-            Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_API_KEY}`
-          },
-        }
-      );
+      const response = await axios.get(`${BASE_URL}?Main%20View`, {
+        headers: {
+          Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_API_KEY}`,
+        },
+      });
       updateRecords(response.data.records);
       console.log(response.data.records);
     };
@@ -33,24 +29,15 @@ function App() {
 
   return (
     <div className="App">
-
       <Header />
       <Switch>
-      <Route exact path='/'>
-          <ServiceTotals 
+        <Route exact path="/">
+          <ServiceTotals
             records={records}
             fetchRecords={fetchRecords}
             invokeFetch={invokeFetch}
           />
         </Route>
-        <Route exact path='/servicedetails'>
-          <ServiceDetails 
-            records={records} 
-            fetchRecords={fetchRecords} 
-            invokeFetch={invokeFetch}
-          />
-        </Route>
-  
       </Switch>
     </div>
   );

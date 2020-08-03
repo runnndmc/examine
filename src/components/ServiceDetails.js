@@ -1,20 +1,15 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-import Bill from './Bill'
 
 const ServiceDetails = (props) => {
     const { fields } = props.record
-    const [currentRecord, updateCurrentRecord] = useState([])
-   
-    
 
-
+    const totalRounded = Math.round(fields.totalowed*100)/100
     return (
-        <div>
-            <h1> services </h1>
-            <h2>{fields.service}</h2>
+        <div className='service-container'>
             <h4>{fields.provider}</h4>
             <h4>{fields.duedate}</h4>
+            <h3>{totalRounded}</h3>
             <p>{fields.notes}</p>
         </div>
 
