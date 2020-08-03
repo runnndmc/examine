@@ -3,6 +3,7 @@ import React from 'react'
 
 const Bill = (props) => {
     const { fields } = props.record
+    
 
     return(
         <div>
@@ -10,7 +11,6 @@ const Bill = (props) => {
             <h4>{fields.provider}</h4>
             <h4>{fields.duedate}</h4>
             <p>{fields.notes}</p>
-
         </div>
 
     )
