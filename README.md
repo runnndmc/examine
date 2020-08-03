@@ -10,9 +10,9 @@ A medical expense tracker for caregivers and patients to track the status of the
 
 ## Wireframe
 
- [My App Wireframe](https://app.lucidchart.com/invitations/accept/7e05e71b-18b1-4a22-a4b2-c9c1341c8b3c)
+ [My App Wireframe](https://imgur.com/a/WkBgSqm)
 
-  [My Desktop Wireframe](https://app.lucidchart.com/invitations/accept/88b7e67c-f049-4e90-a445-99ee29b6a7ba)
+  [My Desktop Wireframe](https://imgur.com/a/tS4DAhO)
 
 #### Component Hierarchy
 
