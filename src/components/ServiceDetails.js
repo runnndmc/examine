@@ -5,12 +5,7 @@ const ServiceDetails = (props) => {
   const { record: bill } = props;
 
   return (
-    <div>
-      <Bill
-        bill={bill}
-        key={bill.id}
-      />
-    </div>
+      <Bill bill={bill} key={bill.id} />
   );
 };
 

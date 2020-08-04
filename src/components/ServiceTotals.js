@@ -14,6 +14,8 @@ const ServiceTotals = (props) => {
     updateCurrentRecords(filteredRecords);
   };
 
+
+
   return (
     <div>
       <h1> Overall Service Totals </h1>
@@ -30,12 +32,19 @@ const ServiceTotals = (props) => {
         </button>
         <button onClick={() => setCurrentFilter("Radiology")}>Radiology</button>
       </div>
-      <div>
-        <h2>{currentRecords.service}</h2>
+
+  
+      <table className="bill">
+        <tr className="bill-container">
+          <th>Provider</th>
+          <th>Due Date</th>
+          <th>Amount Owed</th>
+          <th>Notes</th>
+      </tr>
         {currentRecords.map((record) => (
           <ServiceDetails record={record} key={record.id} />
         ))}
-      </div>
+      </table>
     </div>
   );
 };
