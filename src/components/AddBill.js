@@ -60,7 +60,7 @@ const AddBill = (props) => {
       <input type="text" onChange={(e) => updateOwed(e.target.value)} />
       <br></br>
       <label htmlFor="notes">Notes</label>
-      <textarea onChange={(e) => updateOwed(e.target.value)} />
+      <textarea onChange={(e) => updateNotes(e.target.value)} />
 
       <button type="submit">{submitted ? "Submitted!" : "Add Bill"}</button>
     </form>

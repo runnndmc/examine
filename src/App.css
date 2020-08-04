@@ -10,21 +10,17 @@ Cloud: #ffffff
   text-align: center;
   color: #ffffff;
   font-family: 'Francois One', sans-serif;
-  
 }
 nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-
 }
-
 nav a {
   margin: 5px 20px;
   text-decoration: none;
 }
-
 body{
   background-image: url('https://webgradients.com/public/webgradients_png/041%20Happy%20Acid.png');
 }
@@ -33,21 +29,22 @@ body{
   flex-direction: column;
 }
 .service-buttons button{
+  display: flex;
+  flex-direction: column;
+}
+.service-buttons button{
   background-color:#ddd;
   padding: 10px;
-
 }
-
-
 .service-container{
   display:flex;
   flex-direction: row;
 }
 
+
 table {
   width: 100%;
 }
-
 th, td {
   height: 50px;
   border-bottom: 1px solid #ddd;
@@ -58,14 +55,17 @@ th, td {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 10px auto;
-  padding: 10px;
-  border: 1px solid white;
+  margin: 20px auto;
+  padding: 30px;
+  border: 5px solid white;
   width: fit-content;
   box-sizing: border-box;
-
 }
-
+.create-new input, textarea {
+  width: 200px;
+  max-width: 200px;
+  padding: 5px;
+}
 
 /* Cited 
 // https://webgradients.com/

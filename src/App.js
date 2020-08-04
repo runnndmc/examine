@@ -7,6 +7,7 @@ import "./App.css";
 import Header from "./Header";
 import ServiceTotals from "./components/ServiceTotals";
 import AddBill from './components/AddBill'
+import Details from "./components/Details";
 
 const BASE_URL = "https://api.airtable.com/v0/appBipVvhjiI1uNnZ/Medical%20Expenses";
 

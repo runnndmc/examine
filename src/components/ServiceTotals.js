@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import ServiceDetails from "./ServiceDetails";
+import Details from "./Details";
 
 const ServiceTotals = (props) => {
   const { records } = props;
   const [currentRecords, updateCurrentRecords] = useState([]);
-  console.log(props);
+
 
   const setCurrentFilter = (currentFilter) => {
     let filteredRecords = records.filter((record) => {
@@ -13,22 +13,17 @@ const ServiceTotals = (props) => {
 
     updateCurrentRecords(filteredRecords);
   };
-
-  const showProgress = () => {
-    
-  }
  
   return (
     <div>
       <h1> Overall Service Totals </h1>
-      
+
       <div className="service-buttons">
 
         <button onClick={() => setCurrentFilter("Blood work")}>
-          Blood work {showProgress}
+          Blood work
         </button>
         
-
         <button onClick={() => setCurrentFilter("Cardiology")}>
           Cardiology
         </button>
@@ -47,8 +42,8 @@ const ServiceTotals = (props) => {
           <th>Amount Owed</th>
           <th>Notes</th>
       </tr>
-        {currentRecords.map((record) => (
-          <ServiceDetails record={record} key={record.id} />
+          {currentRecords.map((record) => (
+          <Details record={record} key={record.id} />
         ))}
       </table>
     </div>
