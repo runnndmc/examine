@@ -4,16 +4,42 @@ Stormi: #5390d9
 Cloud: #ffffff
 
 */
+@import url('https://fonts.googleapis.com/css2?family=Francois+One&display=swap');
 
 .App{
   text-align: center;
   color: #ffffff;
+  font-family: 'Francois One', sans-serif;
   
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+
+}
+
+nav a {
+  margin: 5px 20px;
+  text-decoration: none;
 }
 
 body{
   background-image: url('https://webgradients.com/public/webgradients_png/041%20Happy%20Acid.png');
 }
+.service-buttons{
+  display: flex;
+  flex-direction: column;
+}
+.service-buttons button{
+  background-color: hotpink;
+  padding: 10px;
+  margin: 20px;
+
+
+}
+
 .service-container{
   display:flex;
   flex-direction: row;
