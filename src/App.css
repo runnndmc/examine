@@ -53,6 +53,19 @@ th, td {
   border-bottom: 1px solid #ddd;
 }
 
+.create-new{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px solid white;
+  width: fit-content;
+  box-sizing: border-box;
+
+}
+
 
 /* Cited 
 // https://webgradients.com/

@@ -42,7 +42,7 @@ const AddBill = (props) => {
   };
 
   return (
-    <form onSubmit={createBill}>
+    <form onSubmit={createBill} className='create-new'>
       <label htmlFor="provider">Provider</label>
       <input
         type="text"
