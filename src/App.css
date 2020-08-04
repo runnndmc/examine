@@ -45,6 +45,13 @@ body{
   flex-direction: row;
 }
 
+table {
+  width: 100%;
+}
+
+th {
+  height: 50px;
+}
 
 
 /* Cited 
