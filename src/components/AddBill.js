@@ -7,11 +7,13 @@ const AddBill = (props) => {
 
     const [provider, updateProvider] = useState('')
     const [service, updateService] = useState('')
+    const [submitted, updateSubmitted] = useState(false)
 
 
 
-    const createBill = async (provider, service) => {
+    const createBill = async (e) => {
         try{
+            e.preventDefault()
             await axios.post(BASE_URL, {
                 fields: {
                     provider,
@@ -23,6 +25,8 @@ const AddBill = (props) => {
                     'Content-Type': 'application/json'
                 }
             })
+            updateSubmitted(true)
+            setTimeout(() => updateSubmitted(false), 2000)
             props.invokeFetch(true);
         } catch (error) {
             console.log(error.message)
@@ -31,13 +35,13 @@ const AddBill = (props) => {
     
 
     return(
-        <form>
+        <form onSubmit={createBill}>
             <label htmlFor='provider'>Provider</label>
             <input type='text' id='provider' onChange={e => updateProvider(e.target.value)}/>
             <br></br>
             <label htmlFor='service'>Service Type</label>
             <input type='text' onChange={e => updateService(e.target.value)} />
-            <button onClick={() => createBill(provider, service)}>Add Bill</button>
+            <button type='submit'>{submitted ? 'Submitted!' : 'Add Bill'}</button>
         </form>
     )
 }
