@@ -14,15 +14,21 @@ const ServiceTotals = (props) => {
     updateCurrentRecords(filteredRecords);
   };
 
-
-
+  const showProgress = () => {
+    
+  }
+ 
   return (
     <div>
       <h1> Overall Service Totals </h1>
+      
       <div className="service-buttons">
+
         <button onClick={() => setCurrentFilter("Blood work")}>
-          Blood work
+          Blood work {showProgress}
         </button>
+        
+
         <button onClick={() => setCurrentFilter("Cardiology")}>
           Cardiology
         </button>

@@ -33,12 +33,11 @@ body{
   flex-direction: column;
 }
 .service-buttons button{
-  background-color: hotpink;
+  background-color:#ddd;
   padding: 10px;
-  margin: 20px;
-
 
 }
+
 
 .service-container{
   display:flex;
@@ -49,8 +48,9 @@ table {
   width: 100%;
 }
 
-th {
+th, td {
   height: 50px;
+  border-bottom: 1px solid #ddd;
 }
 
 
