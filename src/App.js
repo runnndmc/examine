@@ -9,6 +9,7 @@ import ServiceTotals from "./components/ServiceTotals";
 
 const BASE_URL =
   "https://api.airtable.com/v0/appBipVvhjiI1uNnZ/Medical%20Expenses";
+  
 
 function App() {
   const [records, updateRecords] = useState([]);

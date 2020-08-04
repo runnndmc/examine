@@ -2,20 +2,17 @@ import React, { useState } from 'react'
 import ServiceDetails from './ServiceDetails'
 
 const ServiceTotals = (props) => {
-
+    console.log(props)
     const { records } = props
-    const [currentRecord, updateCurrentRecord] = useState([])
+    const [currentRecords, updateCurrentRecords] = useState([])
 
     const setCurrentFilter = (currentFilter) => {
         let filteredRecords = records.filter((record)=> {
-            if (record.fields.service === currentFilter){
-                return record
-            }
+            return record.fields.service === currentFilter
         })
         console.log(filteredRecords)
-        updateCurrentRecord(filteredRecords)  
+        updateCurrentRecords(filteredRecords)  
        }
-
 
 
     return(
@@ -27,7 +24,7 @@ const ServiceTotals = (props) => {
             <button onClick={ () => setCurrentFilter('Consultation')} >Consultations</button>
             <button onClick={ () => setCurrentFilter('X-ray','Radiology')} >Scans</button>
             <div>
-                {currentRecord.map((record) => (
+                {currentRecords.map((record) => (
                     <ServiceDetails 
                         record={record}
                         key={record.id}
