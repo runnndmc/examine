@@ -18,7 +18,7 @@ const Bill = (props) => {
                         'Content-Type': 'application/json',
                     }
                 })
-                props.invokeFetch(!props.fetchEntries)
+                props.invokeFetch(!props.fetchRecords)
             }, 1000)
         } catch (error){
             console.log(error.message)
@@ -26,7 +26,7 @@ const Bill = (props) => {
     }
 
 
-    const totalRounded = Math.round(fields.totalowed*100)/100
+    const totalRounded = Math.round(fields.stillowe*100)/100
 
     return(
         <div className='bill'>
@@ -35,6 +35,7 @@ const Bill = (props) => {
             <h4>{fields.duedate}</h4>
             <h3>{totalRounded}</h3>
             <p>{fields.notes}</p>
+            <button onClick={handleDelete}>{deleted ? 'Paid!' : 'Pay'}</button>
             </div>
         </div>
 

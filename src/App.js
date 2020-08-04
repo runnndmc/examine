@@ -7,9 +7,7 @@ import "./App.css";
 import Header from "./Header";
 import ServiceTotals from "./components/ServiceTotals";
 
-const BASE_URL =
-  "https://api.airtable.com/v0/appBipVvhjiI1uNnZ/Medical%20Expenses";
-  
+const BASE_URL = "https://api.airtable.com/v0/appBipVvhjiI1uNnZ/Medical%20Expenses";
 
 function App() {
   const [records, updateRecords] = useState([]);
@@ -22,21 +20,22 @@ function App() {
           Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_API_KEY}`,
         },
       });
-      updateRecords(response.data.records);
-      console.log(response.data.records);
+      updateRecords(response.data.records); //filling the array with the records from api
     };
     getAirtableRecords();
-  }, [fetchRecords]);
+  }, [fetchRecords]); //only call the api if fetchRecords is invoked
+
 
   return (
     <div className="App">
       <Header />
+
       <Switch>
         <Route exact path="/">
           <ServiceTotals
             records={records}
             fetchRecords={fetchRecords}
-            invokeFetch={invokeFetch}
+            invokeFetch={invokeFetch} 
           />
         </Route>
       </Switch>

@@ -1,20 +1,17 @@
-import React from 'react'
-import Bill from './Bill'
-
+import React from "react";
+import Bill from "./Bill";
 
 const ServiceDetails = (props) => {
-    const { record: bill } = props
-    console.log(props)
-    return (
-        <div>
-            <h2>{bill.fields.service}</h2>
-                <Bill
-                    bill={bill}
-                    key={bill.id}
-                />
-        </div>
+  const { record: bill } = props;
 
-    )
-}
+  return (
+    <div>
+      <Bill
+        bill={bill}
+        key={bill.id}
+      />
+    </div>
+  );
+};
 
-export default ServiceDetails
+export default ServiceDetails;

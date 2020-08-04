@@ -1,38 +1,43 @@
-import React, { useState } from 'react'
-import ServiceDetails from './ServiceDetails'
+import React, { useState } from "react";
+import ServiceDetails from "./ServiceDetails";
 
 const ServiceTotals = (props) => {
-    console.log(props)
-    const { records } = props
-    const [currentRecords, updateCurrentRecords] = useState([])
+  
+  const { records } = props; 
+  const [currentRecords, updateCurrentRecords] = useState([]);
+  console.log(props);
 
-    const setCurrentFilter = (currentFilter) => {
-        let filteredRecords = records.filter((record)=> {
-            return record.fields.service === currentFilter
-        })
-        console.log(filteredRecords)
-        updateCurrentRecords(filteredRecords)  
-       }
+  const setCurrentFilter = (currentFilter) => {
+    let filteredRecords = records.filter((record) => {
+      return record.fields.service === currentFilter;
+    });
 
+    updateCurrentRecords(filteredRecords);
+  };
 
-    return(
-        <div>
-            <h1> Overall Service Totals </h1>
-            <button onClick={ () => setCurrentFilter('Blood work')} >Blood work</button>
-            <button onClick={ () => setCurrentFilter('Cardiology')} >Cardiology</button>
-            <button onClick={ () => setCurrentFilter('Check-up')} >Check ups</button>
-            <button onClick={ () => setCurrentFilter('Consultation')} >Consultations</button>
-            <button onClick={ () => setCurrentFilter('X-ray','Radiology')} >Scans</button>
-            <div>
-                {currentRecords.map((record) => (
-                    <ServiceDetails 
-                        record={record}
-                        key={record.id}
-                    />
-                ))}
-            </div>
-        </div>
-    )
-}
+  return (
+    <div>
+      <h1> Overall Service Totals </h1>
+      <button onClick={() => setCurrentFilter("Blood work")}>Blood work</button>
+      <button onClick={() => setCurrentFilter("Cardiology")}>Cardiology</button>
+      <button onClick={() => setCurrentFilter("Check-up")}>Check ups</button>
+      <button onClick={() => setCurrentFilter("Consultation")}>
+        Consultations
+      </button>
+      <button onClick={() => setCurrentFilter("X-ray", "Radiology")}>
+        Scans
+      </button>
+      <div>
+        <h2>{currentRecords.service}</h2>
+        {currentRecords.map((record) => (
+            <ServiceDetails
+                record={record}
+                key={record.id}
+            />
+        ))}
+      </div>
+    </div>
+  );
+};
 
-export default ServiceTotals
+export default ServiceTotals;
