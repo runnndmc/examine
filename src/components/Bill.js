@@ -18,7 +18,7 @@ const Bill = (props) => {
                         'Content-Type': 'application/json',
                     }
                 })
-                props.invokeFetch(!props.fetchRecords)
+             /*    props.invokeFetch(!props.fetchRecords) */
             }, 1000)
         } catch (error){
             console.log(error.message)

@@ -6,6 +6,7 @@ import axios from "axios";
 import "./App.css";
 import Header from "./Header";
 import ServiceTotals from "./components/ServiceTotals";
+import AddBill from './components/AddBill'
 
 const BASE_URL = "https://api.airtable.com/v0/appBipVvhjiI1uNnZ/Medical%20Expenses";
 
@@ -14,15 +15,18 @@ function App() {
   const [fetchRecords, invokeFetch] = useState(true);
 
   useEffect(() => {
-    const getAirtableRecords = async () => {
-      const response = await axios.get(`${BASE_URL}?Main%20View`, {
-        headers: {
-          Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_API_KEY}`,
-        },
-      });
-      updateRecords(response.data.records); //filling the array with the records from api
-    };
-    getAirtableRecords();
+    if (fetchRecords) {
+      const getAirtableRecords = async () => {
+        const response = await axios.get(`${BASE_URL}?Main%20View`, {
+          headers: {
+            Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_API_KEY}`,
+          },
+        });
+        updateRecords(response.data.records); //filling the array with the records from api
+      };
+      getAirtableRecords();
+      invokeFetch(false)
+    } 
   }, [fetchRecords]); //only call the api if fetchRecords is invoked
 
 
@@ -35,6 +39,13 @@ function App() {
           <ServiceTotals
             records={records}
             fetchRecords={fetchRecords}
+            invokeFetch={invokeFetch} 
+          />
+        </Route>
+        <Route exact path="/add">
+          <AddBill
+            records={records}
+            fetchRecords={fetchRecords} 
             invokeFetch={invokeFetch} 
           />
         </Route>

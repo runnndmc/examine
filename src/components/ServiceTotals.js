@@ -24,8 +24,8 @@ const ServiceTotals = (props) => {
       <button onClick={() => setCurrentFilter("Consultation")}>
         Consultations
       </button>
-      <button onClick={() => setCurrentFilter("X-ray", "Radiology")}>
-        Scans
+      <button onClick={() => setCurrentFilter("Radiology")}>
+        Radiology
       </button>
       <div>
         <h2>{currentRecords.service}</h2>
