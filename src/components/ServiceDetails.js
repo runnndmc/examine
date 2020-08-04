@@ -6,8 +6,8 @@ const ServiceDetails = (props) => {
     const { record: bill } = props
     console.log(props)
     return (
-        <div className='service-container'>
-            <h2>{props.service}</h2>
+        <div>
+            <h2>{bill.fields.service}</h2>
                 <Bill
                     bill={bill}
                     key={bill.id}
