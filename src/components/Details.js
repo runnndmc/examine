@@ -6,6 +6,8 @@ import Totals from './Totals'
 const Details = (props) => {
   const { record: bill } = props;
   console.log(bill)
+
+  
   return (
     <div>
       <Bill bill={bill} key={bill.id}/>

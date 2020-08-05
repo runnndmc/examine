@@ -24,17 +24,18 @@ nav a {
 body{
   background-image: url('https://webgradients.com/public/webgradients_png/041%20Happy%20Acid.png');
 }
-.service-buttons{
+
+.service-buttons, section{
   display: flex;
   flex-direction: column;
-}
-.service-buttons button{
-  display: flex;
-  flex-direction: column;
-}
-.service-buttons button{
-  background-color:#ddd;
   padding: 10px;
+  margin: 10px;
+  align-items: center;
+}
+section{
+  box-sizing: border-box;
+  width: 30%;
+  background-color:#ddd;
 }
 .service-container{
   display:flex;

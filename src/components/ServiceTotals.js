@@ -20,18 +20,18 @@ const ServiceTotals = (props) => {
 
       <div className="service-buttons">
 
-        <button onClick={() => setCurrentFilter("Blood work")}>
+        <section onClick={() => setCurrentFilter("Blood work")}>
           Blood work
-        </button>
+        </section>
         
-        <button onClick={() => setCurrentFilter("Cardiology")}>
+        <section onClick={() => setCurrentFilter("Cardiology")}>
           Cardiology
-        </button>
-        <button onClick={() => setCurrentFilter("Check-up")}>Check ups</button>
-        <button onClick={() => setCurrentFilter("Consultation")}>
+        </section>
+        <section onClick={() => setCurrentFilter("Check-up")}>Check ups</section>
+        <section onClick={() => setCurrentFilter("Consultation")}>
           Consultations
-        </button>
-        <button onClick={() => setCurrentFilter("Radiology")}>Radiology</button>
+        </section>
+        <section onClick={() => setCurrentFilter("Radiology")}>Radiology</section>
       </div>
 
   
