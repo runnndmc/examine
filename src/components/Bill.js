@@ -29,12 +29,12 @@ const Bill = (props) => {
   const totalRounded = Math.round(fields.stillowe * 100) / 100;
 
   return (
-      <tr>
+    <div>
         <td>{fields.provider}</td>
         <td>{fields.duedate}</td>
         <td>{totalRounded}</td>
         <td>{fields.notes}</td>
-      </tr>
+    </div>
   );
 };
 export default Bill;
