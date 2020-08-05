@@ -34,8 +34,12 @@ body{
 }
 section{
   box-sizing: border-box;
-  width: 30%;
+  width: 40%;
   background-color:#ddd;
+  cursor: pointer;
+}
+section :hover{
+  cursor: pointer;
 }
 .service-container{
   display:flex;
