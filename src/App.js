@@ -43,6 +43,9 @@ function App() {
             invokeFetch={invokeFetch} 
           />
         </Route>
+        <Route exact path="/details">
+          <Details />
+        </Route>
         <Route exact path="/add">
           <AddBill
             records={records}

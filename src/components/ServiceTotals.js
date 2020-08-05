@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+
 import Details from "./Details";
+import Totals from './Totals'
 
 const ServiceTotals = (props) => {
   const { records } = props;
@@ -46,6 +48,7 @@ const ServiceTotals = (props) => {
           <Details record={record} key={record.id} />
         ))}
       </table>
+      {currentRecords.length > 0 && <Totals bills={currentRecords} />}
     </div>
   );
 };
