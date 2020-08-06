@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import axios from "axios";
 import UpdateBill from "./UpdateBill";
 
@@ -37,7 +38,7 @@ const Bill = (props) => {
       <div className="table-body-cell">{fields.notes}</div>
       <button onClick={handleDelete}>{deleted ? "Deleted!" : "Delete?"}</button>
 
-      <UpdateBill fields={fields}/>
+      <Link to={`/update/${id}`}>update</Link>
     </div>
   );
 };

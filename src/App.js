@@ -44,9 +44,6 @@ function App() {
             invokeFetch={invokeFetch} 
           />
         </Route>
-         <Route exact path="/edit">
-          <UpdateBill />
-        </Route> 
         <Route exact path="/add">
           <AddBill
             records={records}
@@ -54,7 +51,7 @@ function App() {
             invokeFetch={invokeFetch} 
           />
         </Route>
-        <Route exact path="/update">
+        <Route exact path="/update/:id">
           <UpdateBill
             records={records}
             fetchRecords={fetchRecords} 

@@ -22,7 +22,6 @@ const AddBill = (props) => {
             provider,
             service,
             duedate,
-            stillowe,
             notes,
           },
         },
@@ -42,15 +41,9 @@ const AddBill = (props) => {
   };
 
   return (
-    
     <form onSubmit={createBill} className="create-new">
       <label htmlFor="provider">Provider</label>
-      <input
-        type="text"
-        id="provider"
-        onChange={(e) => updateProvider(e.target.value)}
-      />
-
+      <input type="text" onChange={(e) => updateProvider(e.target.value)} />
       <br></br>
       <label htmlFor="service">Service Type</label>
       <input type="text" onChange={(e) => updateService(e.target.value)} />
@@ -63,7 +56,6 @@ const AddBill = (props) => {
       <br></br>
       <label htmlFor="notes">Notes</label>
       <textarea onChange={(e) => updateNotes(e.target.value)} />
-
       <button type="submit">{submitted ? "Submitted!" : "Add Bill"}</button>
     </form>
   );
