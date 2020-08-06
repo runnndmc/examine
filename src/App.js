@@ -7,7 +7,6 @@ import "./App.css";
 import Header from "./components/Header";
 import ServiceTotals from "./components/ServiceTotals";
 import AddBill from './components/AddBill';
-import Details from "./components/Details";
 import UpdateBill from "./components/UpdateBill";
 
 

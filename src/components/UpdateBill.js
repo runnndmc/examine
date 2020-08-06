@@ -21,18 +21,20 @@ const UpdateBill = (props) => {
                     "Authorization": `Bearer ${process.env.REACT_APP_AIRTABLE_API_KEY}`,
                     "Content-Type": "application/json"
                 }})
-           params.setItem('provider', provider)
+                return data
+/*            params.setItem('provider', provider)
            .setItem('service', service)
            .setItem('duedate', duedate)
            .setItem('stillowe', stillowe)
-           .setItem('notes', notes)
-
+           .setItem('notes', notes) */
+            
         }
         callApi();
     },[])
     
     return(
         <form className="update-form">
+           <h2 className='update-header'>Pay Your Bills!</h2>
            <label htmlFor="provider">Provider</label>
            <input type="text" id="provider" onChange={(e) => {setProvider(e.target.value)}} value={provider} />
            <br></br>
@@ -40,15 +42,15 @@ const UpdateBill = (props) => {
            <input type="text" id="service" onChange={(e) => {setService(e.target.value)}} value={service} />
            <br></br>
            <label htmlFor="duedate">Due Date</label>
-           <input type="text" id="duedate" onChange={(e) => {setDueDate(e.target.value)}} value={duedate}/>
+           <input type="date" id="duedate" onChange={(e) => {setDueDate(e.target.value)}} value={duedate}/>
            <br></br>
            <label htmlFor="stillowed">Amount Paid</label>
            <input type="text" id="stillowed" onChange={(e) => {setOwed(e.target.value)}} value={stillowe}/>
            <br></br>
            <label htmlFor="notes">Notes</label>
-           <input type="text" id="notes" onChange={(e) => {setNotes(e.target.value)}} value={notes}/>
+           <textarea id="notes" onChange={(e) => {setNotes(e.target.value)}} value={notes}/>
            <br></br>
-           <input type="button" value="Update Bill"></input>
+           <input type="button" value="Update Bill" onClick={updateCurrentRecord}></input>
         </form>
     )
 }

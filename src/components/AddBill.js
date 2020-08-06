@@ -22,7 +22,7 @@ const AddBill = (props) => {
             provider,
             service,
             duedate,
-            stillowe,
+            stillowe: parseFloat(stillowe, 10),
             notes,
           },
         },

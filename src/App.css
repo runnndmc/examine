@@ -79,6 +79,7 @@ section :hover{
   background-color: gray;
   font-weight: bold;
   font-size: 25px;
+  text-align: center;
 }
 .table-footer-cell{
   display: table-cell;
@@ -86,8 +87,6 @@ section :hover{
   text-align: justify;
   border-bottom: 1px solid black;
 }
-
-
 
 
 .create-new{
@@ -107,6 +106,26 @@ section :hover{
   padding: 5px;
 }
 
+.update-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  padding: 30px;
+  border: 5px solid white;
+  width: fit-content;
+  box-sizing: border-box;
+}
+
+.update-form input{
+  width: 200px;
+  max-width: 200px;
+  padding: 5px;
+}
+.update-header{
+  margin: 0px auto 15px
+}
 /* Cited 
 // https://webgradients.com/
 // https://webgradients.com/public/webgradients_png/041%20Happy%20Acid.png

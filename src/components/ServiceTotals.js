@@ -30,19 +30,21 @@ const ServiceTotals = (props) => {
   
       <div className="bill-table">
         <div className="bill-table-caption"> Service Title</div>
-          <div className="bill-table-header"></div>
+
+          <div className="bill-table-header">
             <div className="table-header-cell">Provider</div>
             <div className="table-header-cell">Due Date</div>
             <div className="table-header-cell">Amount Owed</div>
             <div className="table-header-cell">Notes</div>
-          <div className="bill-table-body"></div>
-        
-        {currentRecords.map((record) => (
+          </div>
+          <div className="bill-table-body">
+          {currentRecords.map((record) => (
               <Details 
                 record={record} 
                 key={record.id} 
             />
           ))}
+          </div>
         {currentRecords.length > 0 && <Totals bills={currentRecords} />}
       </div>
     </div>

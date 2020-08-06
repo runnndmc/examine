@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import axios from "axios";
-import UpdateBill from "./UpdateBill";
+
 
 const BASE_URL =
   "https://api.airtable.com/v0/appBipVvhjiI1uNnZ/Medical%20Expenses";
@@ -31,15 +31,16 @@ const Bill = (props) => {
   const totalAmount = fields.stillowe.toFixed(2);
 
   return (
-    <div className="bill-table-row">
+    <>
+    <div className="bill-table-row"></div>
       <div className="table-body-cell">{fields.provider}</div>
       <div className="table-body-cell">{fields.duedate}</div>
       <div className="table-body-cell">{totalAmount}</div>
       <div className="table-body-cell">{fields.notes}</div>
-      <button onClick={handleDelete}>{deleted ? "Deleted!" : "Delete?"}</button>
 
-      <Link to={`/update/${id}`}>update</Link>
-    </div>
+      <button className="table-body-cell" onClick={handleDelete}>{deleted ? "Deleted!" : "Delete?"}</button>
+      <button className="table-body-cell"><Link to={`/update/${id}`}>update</Link></button>
+    </>
   );
 };
 export default Bill;

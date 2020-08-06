@@ -11,9 +11,8 @@ const Totals = (props) => {
 
     return (
         <div className="bill-table-footer">
-            <div className='table-footer-cell'>this is your total</div>
-            <div className='table-footer-cell'>BILLtotal: {billTotal}</div>
-            <div className='table-footer-cell'>ALL BILLS: {allBills}</div>
+            <div className='table-footer-cell'>Total Amount Owed</div>
+            <div className='table-footer-cell'>{billTotal}</div>
         </div>
     )
 }

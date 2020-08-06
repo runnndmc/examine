@@ -7,7 +7,6 @@ import UpdateBill from "./UpdateBill";
 
 const Details = (props) => {
   const { record: bill} = props;
-  console.log(bill)
   const [currentBill, updateCurrentBill] = useState([]);
 
 
