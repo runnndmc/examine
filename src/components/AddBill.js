@@ -22,6 +22,7 @@ const AddBill = (props) => {
             provider,
             service,
             duedate,
+            stillowe,
             notes,
           },
         },
