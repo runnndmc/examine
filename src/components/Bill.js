@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import UpdateBill from "./UpdateBill";
 
 const BASE_URL =
   "https://api.airtable.com/v0/appBipVvhjiI1uNnZ/Medical%20Expenses";
@@ -7,7 +8,7 @@ const BASE_URL =
 const Bill = (props) => {
   const [deleted, updateDeleted] = useState(false);
   const { fields, id } = props.bill;
-  
+  console.log(fields)
 
   const handleDelete = (e) => {
     e.preventDefault();
@@ -20,20 +21,23 @@ const Bill = (props) => {
             "Content-Type": "application/json",
           },
         });
-        /*    props.invokeFetch(!props.fetchRecords) */
+        /* props.invokeFetch(!props.fetchRecords)  */
       }, 1000);
     } catch (error) {
       console.log(error.message);
     }
   };
-  const totalAmount = (fields.stillowe).toFixed(2)
+  const totalAmount = fields.stillowe.toFixed(2);
 
   return (
-    <div class="bill-table-row">
-        <div class="table-body-cell">{fields.provider}</div>
-        <div class="table-body-cell">{fields.duedate}</div>
-        <div class="table-body-cell">{totalAmount}</div>
-        <div class="table-body-cell">{fields.notes}</div>
+    <div className="bill-table-row">
+      <div className="table-body-cell">{fields.provider}</div>
+      <div className="table-body-cell">{fields.duedate}</div>
+      <div className="table-body-cell">{totalAmount}</div>
+      <div className="table-body-cell">{fields.notes}</div>
+      <button onClick={handleDelete}>{deleted ? "Deleted!" : "Delete?"}</button>
+
+      <UpdateBill fields={fields}/>
     </div>
   );
 };
