@@ -19,12 +19,7 @@ const Details = (props) => {
   };
 
   return (
-    <div>
       <Bill bill={bill} key={bill.id}/>
-      <Link to='/update'>
-        <button onClick={() =>  <UpdateBill bill={bill} key={bill.id}/>}>edit</button>
-      </Link>
-    </div>
   );
   
 };

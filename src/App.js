@@ -36,7 +36,6 @@ function App() {
   return (
     <div className="App">
       <Header />
-
       <Switch>
         <Route exact path="/">
           <ServiceTotals
@@ -45,9 +44,9 @@ function App() {
             invokeFetch={invokeFetch} 
           />
         </Route>
-        <Route exact path="/details">
+{/*         <Route exact path="/details">
           <Details />
-        </Route>
+        </Route> */}
         <Route exact path="/add">
           <AddBill
             records={records}
@@ -72,4 +71,5 @@ export default App;
 
 /* CITED
 // https://www.w3schools.com/html/html_tables.asp
+// https://wisdmlabs.com/blog/responsive-tables-using-css-div-tag/
 */

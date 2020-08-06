@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 
 const UpdateBill = (props) => {
-    console.log(props)
-    const [newBill, setNewBill] = useState(props.bill)
+    
+
 
 
     return(

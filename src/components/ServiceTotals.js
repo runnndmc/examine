@@ -3,16 +3,15 @@ import React, { useState } from "react";
 import Details from "./Details";
 import Totals from './Totals'
 
+
 const ServiceTotals = (props) => {
   const { records } = props;
   const [currentRecords, updateCurrentRecords] = useState([]);
-
 
   const setCurrentFilter = (currentFilter) => {
     let filteredRecords = records.filter((record) => {
       return record.fields.service === currentFilter;
     });
-
     updateCurrentRecords(filteredRecords);
   };
  
@@ -29,21 +28,23 @@ const ServiceTotals = (props) => {
       </div>
 
   
-      <table className="bill">
-        <tr className="bill-container">
-          <th>Provider</th>
-          <th>Due Date</th>
-          <th>Amount Owed</th>
-          <th>Notes</th>
-        </tr>
-          {currentRecords.map((record) => (
-            <Details 
-              record={record} 
-              key={record.id} 
+      <div className="bill-table">
+        <div className="bill-table-caption"> Service Title</div>
+          <div className="bill-table-header"></div>
+            <div className="table-header-cell">Provider</div>
+            <div className="table-header-cell">Due Date</div>
+            <div className="table-header-cell">Amount Owed</div>
+            <div className="table-header-cell">Notes</div>
+          <div className="bill-table-body"></div>
+        
+        {currentRecords.map((record) => (
+              <Details 
+                record={record} 
+                key={record.id} 
             />
           ))}
-      </table>
-          {currentRecords.length > 0 && <Totals bills={currentRecords} />}
+        {currentRecords.length > 0 && <Totals bills={currentRecords} />}
+      </div>
     </div>
   );
 };

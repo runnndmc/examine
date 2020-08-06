@@ -49,13 +49,46 @@ section :hover{
 }
 
 
-table {
+.bill-table {
   width: 100%;
+  display: table;
 }
-th, td {
-  height: 50px;
-  border-bottom: 1px solid #ddd;
+.bill-table-caption{
+  display: table-caption;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
 }
+.table-header-cell{
+  display: table-cell;
+  padding: 10px;
+  text-align: justify;
+  border-bottom: 1px solid black;
+}
+.bill-table-body{
+    display: table-row-group;
+}
+.bill-table-row{
+  display: table-row;
+}
+.table-body-cell{
+  display: table-cell;
+}
+.bill-table-footer{
+  display: table-footer-group;
+  background-color: gray;
+  font-weight: bold;
+  font-size: 25px;
+}
+.table-footer-cell{
+  display: table-cell;
+  padding: 10px;
+  text-align: justify;
+  border-bottom: 1px solid black;
+}
+
+
+
 
 .create-new{
   display: flex;

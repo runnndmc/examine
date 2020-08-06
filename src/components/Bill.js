@@ -7,6 +7,7 @@ const BASE_URL =
 const Bill = (props) => {
   const [deleted, updateDeleted] = useState(false);
   const { fields, id } = props.bill;
+  
 
   const handleDelete = (e) => {
     e.preventDefault();
@@ -28,11 +29,11 @@ const Bill = (props) => {
   const totalAmount = (fields.stillowe).toFixed(2)
 
   return (
-    <div>
-        <td>{fields.provider}</td>
-        <td>{fields.duedate}</td>
-        <td>{totalAmount}</td>
-        <td>{fields.notes}</td>
+    <div class="bill-table-row">
+        <div class="table-body-cell">{fields.provider}</div>
+        <div class="table-body-cell">{fields.duedate}</div>
+        <div class="table-body-cell">{totalAmount}</div>
+        <div class="table-body-cell">{fields.notes}</div>
     </div>
   );
 };
