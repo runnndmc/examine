@@ -5,11 +5,14 @@ import axios from 'axios'
 const UpdateBill = (props) => {
     const params = useParams()
     const [currentRecord, updateCurrentRecord] = useState({})
-    const [provider, setProvider] = useState('')
-    const [service, setService] = use
+    const [provider, setProvider] = useState("")
+    const [service, setService] = useState("")
+    const [duedate, setDueDate] = useState("");
+    const [stillowe, setOwed] = useState("");
+    const [notes, setNotes] = useState("");
+    const [edit, setEdit] = useState(false);
 
 
- 
     useEffect(() => {
         const { id } = params
         const callApi = async () => {
@@ -17,6 +20,9 @@ const UpdateBill = (props) => {
                 fields: {
                     provider,
                     service,
+                    duedate,
+                    stillowe,
+                    notes
                 }
             }, {
                 headers:{
@@ -29,24 +35,24 @@ const UpdateBill = (props) => {
     },[])
     
     return(
-        <form onSubmit={updateBill} className="update-form">
+        <form className="update-form">
            <label htmlFor="provider">Provider</label>
-           <input type="text" id="provider" onChange={(e) => updateCurrentRecord(e.target.value)} />
+           <input type="text" id="provider" onChange={(e) => setProvider(e.target.value)} />
            <br></br>
-           <label htmlFor="service">Service Type</label>
-      <input type="text" onChange={(e) => updateService(e.target.value)} />
-      <br></br>
-      <label htmlFor="date">Due Date</label>
-      <input type="date" onChange={(e) => updateDueDate(e.target.value)} />
-      <br></br>
-      <label htmlFor="stillowe">Amount Owed</label>
-      <input type="text" onChange={(e) => updateOwed(e.target.value)} />
-      <br></br>
-      <label htmlFor="notes">Notes</label>
-      <textarea onChange={(e) => updateNotes(e.target.value)} />
-      <button type="submit">{submitted ? "Submitted!" : "Add Bill"}</button>
-    </form>
-       </div>
+           <label htmlFor="service">Service</label>
+           <input type="text" id="service" onChange={(e) => setService(e.target.value)} />
+           <br></br>
+           <label htmlFor="duedate">Due Date</label>
+           <input type="text" id="duedate" onChange={(e) => setDueDate(e.target.value)} />
+           <br></br>
+           <label htmlFor="stillowed">Amount Paid</label>
+           <input type="text" id="stillowed" onChange={(e) => setOwed(e.target.value)} />
+           <br></br>
+           <label htmlFor="notes">Notes</label>
+           <input type="text" id="notes" onChange={(e) => setNotes(e.target.value)} />
+           <br></br>
+           <input type="button" value="Update Bill"></input>
+        </form>
     )
 }
 
