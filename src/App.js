@@ -4,10 +4,12 @@ import { Route, Switch } from "react-router-dom";
 import axios from "axios";
 
 import "./App.css";
-import Header from "./Header";
+import Header from "./components/Header";
 import ServiceTotals from "./components/ServiceTotals";
-import AddBill from './components/AddBill'
+import AddBill from './components/AddBill';
 import Details from "./components/Details";
+import UpdateBill from "./components/UpdateBill";
+
 
 const BASE_URL = "https://api.airtable.com/v0/appBipVvhjiI1uNnZ/Medical%20Expenses";
 
@@ -48,6 +50,13 @@ function App() {
         </Route>
         <Route exact path="/add">
           <AddBill
+            records={records}
+            fetchRecords={fetchRecords} 
+            invokeFetch={invokeFetch} 
+          />
+        </Route>
+        <Route exact path="/update">
+          <UpdateBill
             records={records}
             fetchRecords={fetchRecords} 
             invokeFetch={invokeFetch} 

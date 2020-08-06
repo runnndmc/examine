@@ -25,14 +25,13 @@ const Bill = (props) => {
       console.log(error.message);
     }
   };
-
-  const totalRounded = Math.round(fields.stillowe * 100) / 100;
+  const totalAmount = (fields.stillowe).toFixed(2)
 
   return (
     <div>
         <td>{fields.provider}</td>
         <td>{fields.duedate}</td>
-        <td>{totalRounded}</td>
+        <td>{totalAmount}</td>
         <td>{fields.notes}</td>
     </div>
   );

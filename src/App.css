@@ -16,6 +16,7 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+  border-bottom:2px solid #ffffff;
 }
 nav a {
   margin: 5px 20px;
@@ -37,10 +38,10 @@ section{
   width: 40%;
   background-color:#ddd;
   cursor: pointer;
+  box-shadow: 7px 7px 4px rgb(155, 155, 155);
 }
 section :hover{
   cursor: pointer;
-  box-shadow: 10px 10px 5px grey;
 }
 .service-container{
   display:flex;

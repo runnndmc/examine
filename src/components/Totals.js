@@ -12,8 +12,8 @@ const Totals = (props) => {
     return (
         <div>
             <h1>this is your total</h1>
-            <h2>here: {billTotal}</h2>
-            <h2>Average: {allBills}</h2>
+            <h2>BILLtotal: {billTotal}</h2>
+            <h2>ALL BILLS: {allBills}</h2>
         </div>
     )
 }
