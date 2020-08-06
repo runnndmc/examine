@@ -13,10 +13,9 @@ const Details = (props) => {
   return (
     <div>
       <Bill bill={bill} key={bill.id}/>
-      <UpdateBill bill={bill} key={bill.id}/>
 
-      <Link to='/updateBill'>
-        <button>edit</button>
+      <Link to='/update'>
+        <button onClick={() =>  <UpdateBill bill={bill} key={bill.id}/>}>edit</button>
       </Link>
     </div>
   );

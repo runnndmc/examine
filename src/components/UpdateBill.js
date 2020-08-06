@@ -1,17 +1,19 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-const UpdateBill = (props) => {
+const UpdateBill = () => {
 
 
     return(
-
          <h2>HIIII</h2>
-
     )
-
 }
 
 export default UpdateBill
+
+
+
+
+
 
 /* 
 const EditUserForm = (props) => {
