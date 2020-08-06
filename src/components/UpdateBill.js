@@ -4,36 +4,62 @@ import axios from 'axios'
 
 const UpdateBill = (props) => {
     const params = useParams()
-    const [currentRecord, updateCurrentRecord] = useState({})
+    const { id } = params
     const [provider, setProvider] = useState("")
     const [service, setService] = useState("")
     const [duedate, setDueDate] = useState("");
     const [stillowe, setOwed] = useState("");
     const [notes, setNotes] = useState("");
-    const [edit, setEdit] = useState(false);
- 
+    const [update, setUpdate] = useState(false);
+
+    const BASE_URL = `https://api.airtable.com/v0/appBipVvhjiI1uNnZ/Medical%20Expenses/${id}`
 
     useEffect(() => {
-        const { id } = params
         const callApi = async () => {
-            const data = await axios.get(`https://api.airtable.com/v0/appBipVvhjiI1uNnZ/Medical%20Expenses/${id}`, {
+            const response = await axios.get(BASE_URL, {
                 headers:{
                     "Authorization": `Bearer ${process.env.REACT_APP_AIRTABLE_API_KEY}`,
                     "Content-Type": "application/json"
                 }})
-                return data
-/*            params.setItem('provider', provider)
-           .setItem('service', service)
-           .setItem('duedate', duedate)
-           .setItem('stillowe', stillowe)
-           .setItem('notes', notes) */
-            
+                setProvider(response.data.fields.provider)
+                setService(response.data.fields.service)
+                setDueDate(response.data.fields.duedate)
+                setOwed(response.data.fields.setOwed)
+                setNotes(response.data.fields.setNotes)     
         }
         callApi();
     },[])
-    
+
+    const updateBill = async (e) => {
+        try {
+          e.preventDefault();
+          await axios.put(
+            BASE_URL,
+            {
+              fields: {
+                provider,
+                service,
+                duedate,
+                stillowe: parseFloat(stillowe, 10),
+                notes,
+              },
+            },
+            {
+              headers: {
+                Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_API_KEY}`,
+                "Content-Type": "application/json",
+              },
+            }
+          );
+          setUpdate(true);
+          setTimeout(() => setUpdate(false), 2000);
+          props.invokeFetch(true);
+        } catch (error) {
+          console.log(error.message);
+        }
+      };
     return(
-        <form className="update-form">
+        <form className="update-form" onSubmit={updateBill}>
            <h2 className='update-header'>Pay Your Bills!</h2>
            <label htmlFor="provider">Provider</label>
            <input type="text" id="provider" onChange={(e) => {setProvider(e.target.value)}} value={provider} />
@@ -50,7 +76,7 @@ const UpdateBill = (props) => {
            <label htmlFor="notes">Notes</label>
            <textarea id="notes" onChange={(e) => {setNotes(e.target.value)}} value={notes}/>
            <br></br>
-           <input type="button" value="Update Bill" onClick={updateCurrentRecord}></input>
+           <button type="submit">{update ? "Updated" : "Update?"}</button>
         </form>
     )
 }

@@ -28,13 +28,16 @@ const Bill = (props) => {
       console.log(error.message);
     }
   };
+
   const totalAmount = fields.stillowe.toFixed(2);
 
+
+ 
   return (
     <>
     <div className="bill-table-row"></div>
       <div className="table-body-cell">{fields.provider}</div>
-      <div className="table-body-cell">{fields.duedate}</div>
+      <div className="table-body-cell">{fields.date}</div>
       <div className="table-body-cell">{totalAmount}</div>
       <div className="table-body-cell">{fields.notes}</div>
 

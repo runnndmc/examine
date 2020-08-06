@@ -52,7 +52,7 @@ const AddBill = (props) => {
       <label htmlFor="date">Due Date</label>
       <input type="date" onChange={(e) => updateDueDate(e.target.value)} />
       <br></br>
-      <label htmlFor="stillowe">Amount Owed</label>
+      <label htmlFor="stillowe">Amount Owed</label> 
       <input type="text" onChange={(e) => updateOwed(e.target.value)} />
       <br></br>
       <label htmlFor="notes">Notes</label>

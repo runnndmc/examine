@@ -29,7 +29,7 @@ const ServiceTotals = (props) => {
 
   
       <div className="bill-table">
-        <div className="bill-table-caption"> Service Title</div>
+        <div className="bill-table-caption">{records.currentRecords}</div>
 
           <div className="bill-table-header">
             <div className="table-header-cell">Provider</div>
