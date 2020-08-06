@@ -70,13 +70,13 @@ const UpdateBill = (props) => {
            <label htmlFor="duedate">Due Date</label>
            <input type="date" id="duedate" onChange={(e) => {setDueDate(e.target.value)}} value={duedate}/>
            <br></br>
-           <label htmlFor="stillowed">Amount Paid</label>
+           <label htmlFor="stillowed">New Amount Owed</label>
            <input type="text" id="stillowed" onChange={(e) => {setOwed(e.target.value)}} value={stillowe}/>
            <br></br>
            <label htmlFor="notes">Notes</label>
            <textarea id="notes" onChange={(e) => {setNotes(e.target.value)}} value={notes}/>
            <br></br>
-           <button type="submit">{update ? "Updated" : "Update?"}</button>
+           <button type="submit">{update ? "Updated!" : "Update?"}</button>
         </form>
     )
 }
