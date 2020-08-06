@@ -9,7 +9,7 @@ const AddBill = (props) => {
   const [service, updateService] = useState("");
   const [duedate, updateDueDate] = useState("");
   const [stillowe, updateOwed] = useState("");
-  const [notes, updateNotes] = useState("")
+  const [notes, updateNotes] = useState("");
   const [submitted, updateSubmitted] = useState(false);
 
   const createBill = async (e) => {
@@ -42,7 +42,7 @@ const AddBill = (props) => {
   };
 
   return (
-    <form onSubmit={createBill} className='create-new'>
+    <form onSubmit={createBill} className="create-new">
       <label htmlFor="provider">Provider</label>
       <input
         type="text"
