@@ -174,11 +174,11 @@ section {
   width: 40vw;
   position: block;
   left: 350px;
-  margin-left: 310px;
+  margin-left: 300px;
   margin-top: 0px;
   }
   .table-body-cell{
-    padding: 5px;
+    padding: 6px;
   }
   .bill-table-body {
     width: 40vw;
@@ -189,17 +189,20 @@ section {
   .bill-table-header{
     width: 40vw;
     position: relative;
-    left: 350px;
+    left: 380px;
     margin: 0px;
     justify-content: flex-end;
   }
+  .table-header-cell{
+    padding: 15px;
+  }
   .table-button-container{
-    width: 40vw;
-    left: 350px;
+    width: 50vw;
+    left: 290px;
     position: relative;
   }
   .table-button{
-    width: 40vw;
+    width: 50vw;
   }
   .table-footer-cell{
     width: 40vw;
