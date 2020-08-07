@@ -167,17 +167,25 @@ section {
   }
   .bill-table{
     width: 40vw;
-    justify-content: flex-start;
-    text-align: right;
     border: 3px solid black;
-    display: grid;
+    left: 350px;
   }
  .bill-table-row {
   width: 40vw;
   position: block;
   left: 350px;
-  padding: 20px;
+  margin-left: 310px;
+  margin-top: 0px;
   }
+  .table-body-cell{
+    padding: 5px;
+  }
+  .bill-table-body {
+    width: 40vw;
+    position: block;
+    left: 350px;
+    padding: 20px;
+    }
   .bill-table-header{
     width: 40vw;
     position: relative;
