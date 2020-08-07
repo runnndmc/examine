@@ -180,6 +180,8 @@ textarea {
     width: 40vw;
     left: 350px;
   }
+
+
   .bill-table-row {
     width: 40vw;
     position: block;
@@ -227,7 +229,23 @@ textarea {
   @media (min-width: 1000px) {
     h1{
       margin: 70px 400px -90px 0px;
+      font-size: 40px;
     }
+    nav {
+      font-size:  37px;
+    }
+    .bill-table {
+      left: 650px;
+    }
+
+    .bill-table-row {
+      width: 60vw;
+      margin-left: 350px;
+    }
+    .bill-table-header {
+      width: 63vw;
+    }
+
   }
 }
 

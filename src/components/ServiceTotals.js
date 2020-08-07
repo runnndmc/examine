@@ -17,7 +17,7 @@ const ServiceTotals = (props) => {
  
   return (
     <>
-      <h1> Overall Service Totals </h1>
+      <h1>Let's Examine</h1>
       <div className="service-buttons">
         <section onClick={() => setCurrentFilter("Blood work")}>Blood work</section>
         <section onClick={() => setCurrentFilter("Cardiology")}>Cardiology</section>
