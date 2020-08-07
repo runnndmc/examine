@@ -53,31 +53,46 @@ section :hover{
   width: 100%;
   display: table;
 }
-.bill-table-caption{
+.bill-table-header{
+  display: flex;
+}
+/* .bill-table-caption{
   display: table-caption;
   text-align: center;
   font-size: 30px;
   font-weight: bold;
-}
+} */
 .table-header-cell{
-  display: flex;
-  row: 100vw
+  flex: 1;
   padding: 10px;
   text-align: center;
   border-bottom: 1px solid black;
 }
 .bill-table-body{
-    display: table-row-group;
-    every row has to have display flex and 100vw
-    any cell flex: 1 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     text-align: center;
+    align-content: space-around;
+    width: 100vw;
     background-color: blueviolet;
-}
-.bill-table-row{
-  display: table-row;
+} 
+ .bill-table-row{
+  display: flex;
+  flex-direction: row;
+} 
+.bill-table-row button{
+  width: 4px;
+  height: 3px;
 }
 .table-body-cell{
-  display: table-cell;
+  flex: 1;
+  width: 100vw;
+  flex-grow: inherit;
+  padding: 2px;
+}
+.bill-table-row{
+  flex-wrap: wrap;
 }
 .bill-table-footer{
   display: table-footer-group;

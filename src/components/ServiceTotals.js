@@ -34,6 +34,8 @@ const ServiceTotals = (props) => {
             <div className="table-header-cell">Due Date</div>
             <div className="table-header-cell">Amount Owed</div>
             <div className="table-header-cell">Notes</div>
+            <div className="table-header-cell"></div>
+            <div className="table-header-cell"></div>
           </div>
           <div className="bill-table-body">
           

@@ -32,15 +32,17 @@ const Bill = (props) => {
 
   return (
     <>
-    <div className="bill-table-row"></div>
+    <div className="bill-table-row">
       <div className="table-body-cell">{fields.provider}</div>
       <div className="table-body-cell">{fields.service}</div>
-      <div className="table-body-cell">{fields.date}</div>
+      <div className="table-body-cell">{fields.duedate}</div>
       <div className="table-body-cell">{totalAmount}</div>
       <div className="table-body-cell">{fields.notes}</div>
       
-      <button className="table-body-cell" onClick={handleDelete}>{deleted ? "Deleted!" : "Delete?"}</button>
-      <button className="table-body-cell"><Link to={`/update/${id}`}>update</Link></button>
+      <button onClick={handleDelete}>{deleted ? "Deleted!" : "Delete?"}</button>
+      <button><Link to={`/update/${id}`}>update</Link></button>
+      </div>
+    <div className="table-header-cell"></div>
     </>
   );
 };
