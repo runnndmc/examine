@@ -47,7 +47,6 @@ section :hover {
   display: flex;
   flex-direction: row;
 }
-
 .bill-table {
   width: 100%;
   display: table;
@@ -86,8 +85,11 @@ section :hover {
 .table-button {
   width: 100vw;
   padding: 10px;
-  background-color: teal;
+  background-color:#3d405b;
+  color: white;
 }
+a { color: inherit; } 
+
 .table-body-cell {
   flex: 1;
   width: 100vw;
@@ -173,12 +175,13 @@ textarea {
     position: block;
     left: 350px;
     margin-left: 300px;
-    margin-top: 0px;
-    background-color: rgba(33, 55, 34, 0.214)
+    margin-top: 10px;
+    padding-right: 60px;
+    padding-left: 10px;
+    background-color: rgba(33, 55, 34, 0.1)
   }
   .table-body-cell {
-    padding: 8px;
-    background-color: rgba(33, 55, 34, 0.214)
+    padding: 7px;
   }
   .bill-table-body {
     width: 40vw;
@@ -188,7 +191,7 @@ textarea {
     background-color:rgba(33, 55, 34, 0.001)
   }
   .bill-table-header {
-    width: 40vw;
+    width: 43vw;
     position: relative;
     left: 380px;
     margin: 0px;
@@ -198,15 +201,15 @@ textarea {
     padding: 15px;
   }
   .table-button-container {
-    width: 50vw;
+    width: 55vw;
     left: 290px;
     position: relative;
   }
   .table-button {
-    width: 50vw;
+    width: 55vw;
   }
   .bill-table-footer {
-    width: 50vw;
+    width: 55vw;
     left: 310px;
     position: relative;
   }
@@ -215,4 +218,5 @@ textarea {
 /* Cited 
 // https://webgradients.com/
 // https://webgradients.com/public/webgradients_png/041%20Happy%20Acid.png
+// https://stackoverflow.com/questions/6722467/how-to-remove-the-default-link-color-of-the-html-hyperlink-a-tag
 */
