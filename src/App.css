@@ -79,7 +79,7 @@ section :hover{
  .bill-table-row{
   display: flex;
   flex-direction: row;
-  align-content: space-around;
+  justify-content: space-between;
 } 
 .table-button-container{
   display: flex;
