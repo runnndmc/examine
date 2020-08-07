@@ -225,17 +225,16 @@ form button{
   }
 
   .bill-table-row {
-    width: 40vw;
+    width: 45vw;
     position: block;
-    left: 350px;
-    margin-left: 300px;
+    margin-left: 290px;
     margin-top: 10px;
     padding-right: 60px;
-    padding-left: 10px;
+    padding-left: 20px;
     background-color: #4d4d4d28
   }
   .table-body-cell {
-    padding: 7px;
+    margin-left: 18px;
   }
   .bill-table-body {
     width: 40vw;
@@ -258,7 +257,7 @@ form button{
     background-color:#3b429f;
   }
   .bill-table-footer {
-    width: 55vw;
+    width: 53vw;
     left: 310px;
     position: relative;
   }
