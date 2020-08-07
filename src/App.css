@@ -81,13 +81,14 @@ section :hover{
   flex-direction: row;
   align-content: space-around;
 } 
-.bill-table-row button{
-  width: 50px;
-  height: 30px;
-  width: fit-content;
+.table-button-container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
 }
 .table-button{
-
+  width: fit-content;
 }
 .table-body-cell{
   flex: 1;
