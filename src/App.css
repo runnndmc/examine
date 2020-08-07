@@ -14,7 +14,7 @@ Cloud: #ffffff
 nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-start;
   border-bottom:2px solid #ffffff;
 }
@@ -57,12 +57,6 @@ section :hover{
   display: flex;
   align-content: space-around;
 }
-/* .bill-table-caption{
-  display: table-caption;
-  text-align: center;
-  font-size: 30px;
-  font-weight: bold;
-} */
 .table-header-cell{
   flex: 1;
   padding: 10px;
@@ -74,12 +68,13 @@ section :hover{
     flex-direction: row;
     flex-wrap: wrap;
     text-align: flex-start;
-    background-color: blueviolet;
+    background-color: silver ;
 } 
  .bill-table-row{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-top: 15px;
   margin: 0px;
   margin-bottom: 20px ;
   width: 100vw;
@@ -92,6 +87,7 @@ section :hover{
 .table-button{
   width: 100vw;
   padding: 10px;
+  background-color: teal;
 }
 .table-body-cell{
   flex: 1;
@@ -149,6 +145,25 @@ section :hover{
 .update-header{
   margin: 0px auto 15px
 }
+
+@media (min-width: 400px){
+
+  nav{
+    justify-content: space-between;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /* Cited 
 // https://webgradients.com/
 // https://webgradients.com/public/webgradients_png/041%20Happy%20Acid.png
