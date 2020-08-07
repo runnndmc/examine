@@ -150,65 +150,66 @@ textarea {
     font-size: 25px;
     justify-content: space-between;
   }
-  h1{
+  h1 {
     text-align: right;
     margin: 70px 90px -90px 0px;
-
   }
   .service-buttons,
-section {
+  section {
     display: grid;
     align-items: flex-start;
     width: 50%;
     margin: 0px 10px 20px;
   }
-  section{
+  section {
     align-content: center;
   }
-  .bill-table{
+  .bill-table {
     width: 40vw;
-    border: 3px solid black;
     left: 350px;
   }
- .bill-table-row {
-  width: 40vw;
-  position: block;
-  left: 350px;
-  margin-left: 300px;
-  margin-top: 0px;
+  .bill-table-row {
+    width: 40vw;
+    position: block;
+    left: 350px;
+    margin-left: 300px;
+    margin-top: 0px;
+    background-color: rgba(33, 55, 34, 0.214)
   }
-  .table-body-cell{
-    padding: 6px;
+  .table-body-cell {
+    padding: 8px;
+    background-color: rgba(33, 55, 34, 0.214)
   }
   .bill-table-body {
     width: 40vw;
     position: block;
     left: 350px;
     padding: 20px;
-    }
-  .bill-table-header{
+    background-color:rgba(33, 55, 34, 0.001)
+  }
+  .bill-table-header {
     width: 40vw;
     position: relative;
     left: 380px;
     margin: 0px;
     justify-content: flex-end;
   }
-  .table-header-cell{
+  .table-header-cell {
     padding: 15px;
   }
-  .table-button-container{
+  .table-button-container {
     width: 50vw;
     left: 290px;
     position: relative;
   }
-  .table-button{
+  .table-button {
     width: 50vw;
   }
-  .table-footer-cell{
-    width: 40vw;
-    left: 350px;
+  .bill-table-footer {
+    width: 50vw;
+    left: 310px;
+    position: relative;
   }
-
 }
 
 /* Cited 
