@@ -4,98 +4,97 @@ Stormi: #5390d9
 Cloud: #ffffff
 
 */
-@import url('https://fonts.googleapis.com/css2?family=Francois+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Francois+One&display=swap");
 
-.App{
+.App {
   text-align: center;
   color: #ffffff;
-  font-family: 'Francois One', sans-serif;
+  font-family: "Francois One", sans-serif;
 }
 nav {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: flex-start;
-  border-bottom:2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
 }
 nav a {
   margin: 5px 20px;
   text-decoration: none;
 }
-body{
-  background-image: url('https://webgradients.com/public/webgradients_png/041%20Happy%20Acid.png');
+body {
+  background-image: url("https://webgradients.com/public/webgradients_png/041%20Happy%20Acid.png");
 }
-
-.service-buttons, section{
+.service-buttons,
+section {
   display: flex;
   flex-direction: column;
   padding: 10px;
   margin: 10px;
   align-items: center;
 }
-section{
+section {
   box-sizing: border-box;
   width: 40%;
-  background-color:#ddd;
+  background-color: #ddd;
   cursor: pointer;
   box-shadow: 7px 7px 4px rgb(155, 155, 155);
 }
-section :hover{
+section :hover {
   cursor: pointer;
 }
-.service-container{
-  display:flex;
+.service-container {
+  display: flex;
   flex-direction: row;
 }
-
 
 .bill-table {
   width: 100%;
   display: table;
 }
-.bill-table-header{
+.bill-table-header {
   display: flex;
   align-content: space-around;
 }
-.table-header-cell{
+.table-header-cell {
   flex: 1;
   padding: 10px;
   text-align: center;
   border-bottom: 1px solid black;
 }
-.bill-table-body{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    text-align: flex-start;
-    background-color: silver ;
-} 
- .bill-table-row{
+.bill-table-body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: flex-start;
+  background-color: silver;
+}
+.bill-table-row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding-top: 15px;
   margin: 0px;
-  margin-bottom: 20px ;
+  margin-bottom: 20px;
   width: 100vw;
-} 
-.table-button-container{
+}
+.table-button-container {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
 }
-.table-button{
+.table-button {
   width: 100vw;
   padding: 10px;
   background-color: teal;
 }
-.table-body-cell{
+.table-body-cell {
   flex: 1;
   width: 100vw;
   flex-grow: inherit;
   padding: 2px;
 }
-.bill-table-footer{
+.bill-table-footer {
   display: flex;
   background-color: gray;
   font-weight: bold;
@@ -103,13 +102,12 @@ section :hover{
   text-align: center;
   justify-content: space-between;
 }
-.table-footer-cell{
+.table-footer-cell {
   display: table-cell;
   padding: 10px;
   text-align: justify;
 }
-
-.create-new{
+.create-new {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -120,13 +118,13 @@ section :hover{
   width: fit-content;
   box-sizing: border-box;
 }
-.create-new input, textarea {
+.create-new input,
+textarea {
   width: 200px;
   max-width: 200px;
   padding: 5px;
 }
-
-.update-form{
+.update-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -137,32 +135,70 @@ section :hover{
   width: fit-content;
   box-sizing: border-box;
 }
-.update-form input{
+.update-form input {
   width: 200px;
   max-width: 200px;
   padding: 5px;
 }
-.update-header{
-  margin: 0px auto 15px
+.update-header {
+  margin: 0px auto 15px;
 }
 
-@media (min-width: 400px){
-
-  nav{
+@media (min-width: 700px) {
+  nav {
+    padding: 10px;
+    font-size: 25px;
     justify-content: space-between;
   }
+  h1{
+    text-align: right;
+    margin: 70px 90px -90px 0px;
+
+  }
+  .service-buttons,
+section {
+    display: grid;
+    align-items: flex-start;
+    width: 50%;
+    margin: 0px 10px 20px;
+  }
+  section{
+    align-content: center;
+  }
+  .bill-table{
+    width: 40vw;
+    justify-content: flex-start;
+    text-align: right;
+    border: 3px solid black;
+    display: grid;
+  }
+ .bill-table-row {
+  width: 40vw;
+  position: block;
+  left: 350px;
+  padding: 20px;
+  }
+  .bill-table-header{
+    width: 40vw;
+    position: relative;
+    left: 350px;
+    margin: 0px;
+    justify-content: flex-end;
+  }
+  .table-button-container{
+    width: 40vw;
+    left: 350px;
+    position: relative;
+  }
+  .table-button{
+    width: 40vw;
+  }
+  .table-footer-cell{
+    width: 40vw;
+    left: 350px;
+  }
+
 }
-
-
-
-
-
-
-
-
-
-
-
 
 /* Cited 
 // https://webgradients.com/
