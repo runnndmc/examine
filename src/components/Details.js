@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import { Link } from 'react-router-dom'
 
 import Bill from "./Bill";
-import UpdateBill from "./UpdateBill";
 
 
 const Details = (props) => {

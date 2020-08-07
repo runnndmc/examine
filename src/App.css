@@ -1,9 +1,3 @@
-/* MAIN COLORS 
-gradient: https://webgradients.com/public/webgradients_png/041%20Happy%20Acid.png
-Stormi: #5390d9
-Cloud: #ffffff
-
-*/
 @import url("https://fonts.googleapis.com/css2?family=Francois+One&display=swap");
 
 .App {
@@ -263,7 +257,7 @@ textarea {
   }
 }
 
-/* Cited 
+/* CITED
 // https://webgradients.com/
 // https://webgradients.com/public/webgradients_png/041%20Happy%20Acid.png
 // https://stackoverflow.com/questions/6722467/how-to-remove-the-default-link-color-of-the-html-hyperlink-a-tag

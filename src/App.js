@@ -6,11 +6,11 @@ import axios from "axios";
 import "./App.css";
 import Header from "./components/Header";
 import ServiceTotals from "./components/ServiceTotals";
-import AddBill from './components/AddBill';
+import AddBill from "./components/AddBill";
 import UpdateBill from "./components/UpdateBill";
 
-
-const BASE_URL = "https://api.airtable.com/v0/appBipVvhjiI1uNnZ/Medical%20Expenses";
+const BASE_URL =
+  "https://api.airtable.com/v0/appBipVvhjiI1uNnZ/Medical%20Expenses";
 
 function App() {
   const [records, updateRecords] = useState([]);
@@ -27,10 +27,9 @@ function App() {
         updateRecords(response.data.records); //filling the array with the records from api
       };
       getAirtableRecords();
-      invokeFetch(false)
-    } 
+      invokeFetch(false);
+    }
   }, [fetchRecords]); //only call the api if fetchRecords is invoked
-
 
   return (
     <div className="App">
@@ -40,21 +39,21 @@ function App() {
           <ServiceTotals
             records={records}
             fetchRecords={fetchRecords}
-            invokeFetch={invokeFetch} 
+            invokeFetch={invokeFetch}
           />
         </Route>
         <Route exact path="/add">
           <AddBill
             records={records}
-            fetchRecords={fetchRecords} 
-            invokeFetch={invokeFetch} 
+            fetchRecords={fetchRecords}
+            invokeFetch={invokeFetch}
           />
         </Route>
         <Route exact path="/update/:id">
           <UpdateBill
             records={records}
-            fetchRecords={fetchRecords} 
-            invokeFetch={invokeFetch} 
+            fetchRecords={fetchRecords}
+            invokeFetch={invokeFetch}
           />
         </Route>
       </Switch>
@@ -64,8 +63,6 @@ function App() {
 
 export default App;
 
-
 /* CITED
-// https://www.w3schools.com/html/html_tables.asp
 // https://wisdmlabs.com/blog/responsive-tables-using-css-div-tag/
 */

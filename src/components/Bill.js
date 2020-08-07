@@ -9,7 +9,6 @@ const BASE_URL =
 const Bill = (props) => {
   const [deleted, updateDeleted] = useState(false);
   const { fields, id } = props.bill;
-  console.log(fields)
 
   const handleDelete = (e) => {
     e.preventDefault();

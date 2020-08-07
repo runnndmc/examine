@@ -82,14 +82,3 @@ const UpdateBill = (props) => {
 }
 
 export default UpdateBill
-
-
-
-/* 
-fields: {
-    provider,
-    service,
-    duedate,
-    stillowe,
-    notes
-} */
