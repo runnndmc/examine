@@ -55,6 +55,7 @@ section :hover{
 }
 .bill-table-header{
   display: flex;
+  align-content: space-around;
 }
 /* .bill-table-caption{
   display: table-caption;
@@ -72,20 +73,21 @@ section :hover{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    text-align: center;
-    width: 100vw;
+    text-align: flex-start;
     background-color: blueviolet;
 } 
  .bill-table-row{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin: 0px;
+  width: 100vw;
 } 
 .table-button-container{
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-
+  margin: 10px;
 }
 .table-button{
   width: fit-content;
@@ -96,21 +98,18 @@ section :hover{
   flex-grow: inherit;
   padding: 2px;
 }
-.bill-table-row{
-  flex-wrap: wrap;
-}
 .bill-table-footer{
-  display: table-footer-group;
+  display: flex;
   background-color: gray;
   font-weight: bold;
   font-size: 25px;
   text-align: center;
+  justify-content: space-between;
 }
 .table-footer-cell{
   display: table-cell;
   padding: 10px;
   text-align: justify;
-  border-bottom: 1px solid black;
 }
 
 .create-new{
