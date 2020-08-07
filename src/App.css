@@ -212,7 +212,7 @@ form button{
     width: 40vw;
     left: 350px;
   }
-  .bill-table-header{;
+  .bill-table-header{
     background-color: #3b429f;
   }
   .bill-table-header {
@@ -264,22 +264,25 @@ form button{
 
   @media (min-width: 1000px) {
     h1{
-      margin: 70px 400px -90px 0px;
+      margin: 70px 250px -90px 0px;
       font-size: 40px;
     }
-    nav {
-      font-size:  37px;
+    nav a{
+      font-size: 30px;
+    }
+    .bill-table-body{
+      font-size: 20px;
     }
     .bill-table {
       left: 650px;
     }
-
     .bill-table-row {
-      width: 55vw;
-      margin-left: 380px;
+      width: 56vw;
+      margin-left: 370px;
     }
     .bill-table-header {
       width: 63vw;
+      margin-left: 70px;
     }
     .table-header-cell {
       font-size: 20px;
@@ -292,7 +295,7 @@ form button{
       width: 63vw;
     }
     .bill-table-footer {
-      width: 63vw;
+      width: 61vw;
       left: 390px;
     }
 
