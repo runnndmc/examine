@@ -1,14 +1,21 @@
+/*MAIN
+//navy #3b429f
+section color: #dfd1d1
+shadow: #9b9b9b
+
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=Francois+One&display=swap");
 
 .App {
   text-align: center;
-  color:rgb(237, 231, 231);
+  color:#3b429f;
   font-family: "Francois One", sans-serif;
 }
 nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-start;
   border-bottom: 2px solid #ffffff;
 }
@@ -16,9 +23,13 @@ nav a {
   color: #3b429f;
   margin: 5px 20px;
   text-decoration: none;
+  font-size: 20px;
 }
 body {
-  background-image: url("https://webgradients.com/public/webgradients_png/041%20Happy%20Acid.png");
+  background-color: #f0f5ff;
+}
+h1{
+  color:#3b429f;
 }
 .service-buttons,
 section {
@@ -29,15 +40,19 @@ section {
   align-items: center;
 }
 section {
-  color: #3b429f;
+  color: #f0f5ff;
+  background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
   box-sizing: border-box;
-  width: 40%;
-  background-color:rgb(223, 209, 209);
+  width: 50%;
+  background-color:#dfd1d1;
   cursor: pointer;
-  box-shadow: 7px 7px 4px rgb(155, 155, 155);
+  box-shadow: 7px 7px 4px #9b9b9b;
+  font-size: 18px;
+  font-weight: 600;
 }
 section :hover {
   cursor: pointer;
+  opacity: 3;
 }
 .service-container {
   display: flex;
@@ -50,25 +65,28 @@ section :hover {
 .bill-table-header {
   display: flex;
   align-content: space-around;
+  background-color: #3b429f;
+  color: #f0f5ff;
+  margin-top: 30px;
+  width: 100vw;
 }
 .table-header-cell {
   flex: 1;
-  padding: 10px;
   text-align: center;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #ffffff;
 }
 .bill-table-body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   text-align: flex-start;
-  background-color:#2f827838;
+  background-color: #f0f5ff;
   
 }
 .bill-table-row {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   padding-top: 15px;
   margin: 0px;
   margin-bottom: 20px;
@@ -83,7 +101,7 @@ section :hover {
   width: 100vw;
   padding: 10px;
   margin: 2px;
-  background-color:#353a7e;
+  background-color:#3b429f;
   color: white;
   font-weight: bold;
 }
@@ -101,11 +119,12 @@ a {
 }
 .bill-table-footer {
   display: flex;
-  color: #3b429f;
-  background-color:rgb(201, 194, 194);
+  color: #f0f5ff;
+  background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
   font-weight: bold;
   font-size: 25px;
   text-align: center;
+  padding: 10px;
   justify-content: space-between;
 }
 .table-footer-cell {
@@ -120,7 +139,7 @@ a {
   align-items: center;
   margin: 20px auto;
   padding: 30px;
-  border: 5px solid rgb(237, 231, 231);
+  border: 5px solid #3b429f;
   width: fit-content;
   box-sizing: border-box;
 }
@@ -137,7 +156,7 @@ textarea {
   align-items: center;
   margin: 20px auto;
   padding: 30px;
-  border: 5px solid rgb(237, 231, 231);
+  border: 5px solid #3b429f;
   width: fit-content;
   box-sizing: border-box;
 }
@@ -184,7 +203,7 @@ textarea {
     margin-top: 10px;
     padding-right: 60px;
     padding-left: 10px;
-    background-color: rgba(77, 77, 77, 0.155)
+    background-color: #4d4d4d28
   }
   .table-body-cell {
     padding: 7px;
@@ -194,7 +213,7 @@ textarea {
     position: block;
     left: 350px;
     padding: 20px;
-    background-color:rgba(239, 249, 240, 0.001)
+    background-color:#eff9f000
   }
   .bill-table-header {
     width: 43vw;
