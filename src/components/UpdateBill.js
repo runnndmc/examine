@@ -76,7 +76,7 @@ const UpdateBill = (props) => {
            <label htmlFor="notes">Notes</label>
            <textarea id="notes" onChange={(e) => {setNotes(e.target.value)}} value={notes}/>
            <br></br>
-           <button type="submit">{update ? "Updated!" : "Update?"}</button>
+           <button className="update-button" type="submit">{update ? "Updated!" : "Update?"}</button>
         </form>
     )
 }

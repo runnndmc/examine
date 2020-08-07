@@ -132,7 +132,10 @@ a {
   padding: 10px;
   text-align: justify;
 }
+
 .create-new {
+  color: #f0f5ff;
+  background-color: #3b429f;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -142,6 +145,12 @@ a {
   border: 5px solid #3b429f;
   width: fit-content;
   box-sizing: border-box;
+}
+.create-new button{
+  font-weight: 900;
+  color: #f0f5ff;
+  width: 50%;
+  border: 3px solid
 }
 .create-new input,
 textarea {
@@ -166,7 +175,16 @@ textarea {
   padding: 5px;
 }
 .update-header {
-  margin: 0px auto 15px;
+  margin: 10px auto 20px;
+}
+form button{
+  padding: 10px;
+  width: 40%;
+  color:#f0f5ff;
+  font-weight: 800;
+  font-size: 15px;
+  background-color: #3b429f;
+  margin-top: 20px;
 }
 
 @media (min-width: 700px) {
@@ -177,7 +195,7 @@ textarea {
   }
   h1 {
     text-align: right;
-    margin: 70px 90px -90px 0px;
+    margin: 70px 180px -90px 0px;
   }
   .service-buttons,
   section {
@@ -189,11 +207,22 @@ textarea {
   section {
     align-content: center;
   }
+
   .bill-table {
     width: 40vw;
     left: 350px;
   }
-
+  .bill-table-header{;
+    background-color: #3b429f;
+  }
+  .bill-table-header {
+    width: 53vw;
+    position: relative;
+    left: 310px;
+    margin: 0px;
+    padding: 0 10px;
+    justify-content: flex-end;
+  }
 
   .bill-table-row {
     width: 40vw;
@@ -215,13 +244,7 @@ textarea {
     padding: 20px;
     background-color:#eff9f000
   }
-  .bill-table-header {
-    width: 43vw;
-    position: relative;
-    left: 380px;
-    margin: 0px;
-    justify-content: flex-end;
-  }
+
   .table-header-cell {
     padding: 15px;
   }
@@ -239,6 +262,7 @@ textarea {
     left: 310px;
     position: relative;
   }
+
   @media (min-width: 1000px) {
     h1{
       margin: 70px 400px -90px 0px;
