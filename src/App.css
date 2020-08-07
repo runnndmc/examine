@@ -270,6 +270,9 @@ form button{
     nav a{
       font-size: 30px;
     }
+    section {
+      font-size: 25px;
+    }
     .bill-table-body{
       font-size: 20px;
     }
