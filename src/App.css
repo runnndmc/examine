@@ -219,7 +219,7 @@ textarea {
   }
   .table-button {
     width: 55vw;
-    background-color:#ef8354;
+    background-color:#3b429f;
   }
   .bill-table-footer {
     width: 55vw;
@@ -239,11 +239,25 @@ textarea {
     }
 
     .bill-table-row {
-      width: 60vw;
-      margin-left: 350px;
+      width: 55vw;
+      margin-left: 380px;
     }
     .bill-table-header {
       width: 63vw;
+    }
+    .table-header-cell {
+      font-size: 20px;
+    }
+    .table-button-container {
+      width: 63vw;
+      left: 365px;
+    }
+    .table-button {
+      width: 63vw;
+    }
+    .bill-table-footer {
+      width: 63vw;
+      left: 390px;
     }
 
   }
