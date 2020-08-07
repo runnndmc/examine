@@ -38,10 +38,10 @@ const Bill = (props) => {
       <div className="table-body-cell">{fields.duedate}</div>
       <div className="table-body-cell">{totalAmount}</div>
       <div className="table-body-cell">{fields.notes}</div>
-    <div className='table-button-container'>
-      <button className="table-button" onClick={handleDelete}>{deleted ? "Deleted!" : "Delete?"}</button>
-      <button className="table-button"><Link to={`/update/${id}`}>update</Link></button>
     </div>
+    <div className='table-button-container'>
+      <button className="table-button"><Link to={`/update/${id}`}>Edit</Link></button>
+      <button className="table-button" onClick={handleDelete}>{deleted ? "Deleted!" : "Delete"}</button>
     </div>
     </>
   );
