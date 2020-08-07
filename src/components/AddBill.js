@@ -43,6 +43,7 @@ const AddBill = (props) => {
 
   return (
     <form onSubmit={createBill} className="create-new">
+      <h2>Add a New Bill</h2>
       <label htmlFor="provider">Provider</label>
       <input type="text" onChange={(e) => updateProvider(e.target.value)} />
       <br></br>

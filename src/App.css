@@ -60,13 +60,18 @@ section :hover{
   font-weight: bold;
 }
 .table-header-cell{
-  display: table-cell;
+  display: flex;
+  row: 100vw
   padding: 10px;
-  text-align: justify;
+  text-align: center;
   border-bottom: 1px solid black;
 }
 .bill-table-body{
     display: table-row-group;
+    every row has to have display flex and 100vw
+    any cell flex: 1 
+    text-align: center;
+    background-color: blueviolet;
 }
 .bill-table-row{
   display: table-row;
@@ -87,7 +92,6 @@ section :hover{
   text-align: justify;
   border-bottom: 1px solid black;
 }
-
 
 .create-new{
   display: flex;
@@ -117,7 +121,6 @@ section :hover{
   width: fit-content;
   box-sizing: border-box;
 }
-
 .update-form input{
   width: 200px;
   max-width: 200px;
