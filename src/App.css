@@ -73,17 +73,21 @@ section :hover{
     flex-direction: row;
     flex-wrap: wrap;
     text-align: center;
-    align-content: space-around;
     width: 100vw;
     background-color: blueviolet;
 } 
  .bill-table-row{
   display: flex;
   flex-direction: row;
+  align-content: space-around;
 } 
 .bill-table-row button{
-  width: 4px;
-  height: 3px;
+  width: 50px;
+  height: 30px;
+  width: fit-content;
+}
+.table-button{
+
 }
 .table-body-cell{
   flex: 1;
